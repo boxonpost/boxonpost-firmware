@@ -15,14 +15,16 @@ Go to **[Releases](../../releases/latest)** and pick the file for your radio. No
 | Heltec V3 | ✅ Tested |
 | Heltec V4 (small screen) | ✅ Tested |
 | Heltec V4 R8 (small screen) | ✅ Tested |
-| Heltec V4 / V4 R8 touch screen, Heltec T114, ThinkNode M1, M2, M3, M5, M7, M9 | 🧪 Being tested, coming soon |
+| Heltec V4 touch screen (Expansion Kit) | ✅ Tested (new in 0.6) |
+| Heltec V4 R8 touch screen, Heltec T114, ThinkNode M1, M2, M3, M5, M7, M9 | 🧪 Being tested, coming soon |
 
 **File types**
 - `…-UPDATE.bin`: for a radio already running MeshCore. Install with "Erase device" **unticked** to keep your contacts.
 - `…-FRESH-INSTALL-merged.bin`: a complete image for a new or wiped radio.
 - `_ble`: connect the phone app by Bluetooth (most people). `_usb`: connect by USB cable.
+- `_tft`: for the V4 with Heltec's touch-screen Expansion Kit.
 
-Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.17.1-BOP-0.5` = MeshCore 1.17.1 + BoxOnPost 0.5).
+Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.17.1-BOP-0.6` = MeshCore 1.17.1 + BoxOnPost 0.6).
 
 ## Licence
 
