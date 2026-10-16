@@ -1,38 +1,32 @@
-# BoxOnPost firmware
+**BoxOnPost 0.7** (includes MeshCore 1.18.0)
 
-**A mailbox for MeshCore radios.** When you send a direct message and the other person's radio can't be reached, your radio keeps it and keeps trying until their radio confirms it got it.
+BoxOnPost now runs on **MeshCore 1.18.0** (it was 1.17.1). Everything BoxOnPost does stays the same: the mailbox, " ~BOP" on late deliveries, no double messages, the BoxOnPost Status channel, the screen pages and the touch-screen controls.
 
-This repository only holds the **firmware downloads**. Install guides, the list of supported radios and help are on the website:
+**What you get from MeshCore 1.18**
+- Security and stability fixes.
+- The radio keeps its clock through a restart.
+- Heltec V3 / V4 / V4 R8 (Bluetooth versions): Wi-Fi and Bluetooth at the same time. Set up Wi-Fi from the MeshCore app 1.50 or newer.
+- The new Command Line and remote-command features in the MeshCore app 1.50. (BoxOnPost only holds and retries normal direct messages, never commands.)
 
-### 👉 [boxonpost.com](https://boxonpost.com)
+You do **not** need to update the phone app; your current app keeps working.
 
-## Downloads
+**Changes in BoxOnPost**
+- Heltec **V3** and **V4 R8** hold **50** messages (was 64 and 100) to leave memory for Wi-Fi and Bluetooth. If one is holding more than 50 when you update, the extra oldest ones are skipped safely.
+- Uses less memory on every radio.
 
-Go to **[Releases](../../releases/latest)** and pick the file for your radio. Not sure which one? Each radio has its own step-by-step page on [boxonpost.com](https://boxonpost.com) that links to the exact file.
+**Radios in this release**
+- Heltec V3
+- Heltec V4 (small screen)
+- Heltec V4 R8 (small screen)
+- Heltec V4 with touch screen
 
-| Radio | Status |
-|---|---|
-| Heltec V3 | ✅ Tested |
-| Heltec V4 (small screen) | ✅ Tested |
-| Heltec V4 R8 (small screen) | ✅ Tested |
-| Heltec V4 touch screen (Expansion Kit) | ✅ Tested (new in 0.6) |
-| Heltec V4 R8 touch screen, Heltec T114, ThinkNode M1, M2, M3, M5, M7, M9 | 🧪 Being tested, coming soon |
+**Which file?** Follow your radio's page on https://boxonpost.com.
+- `…-UPDATE.bin`: radio already on MeshCore or BoxOnPost. flasher.meshcore.io → Custom Firmware, "Erase device" **unticked**.
+- `…-FRESH-INSTALL-merged.bin`: new or wiped radio.
+- `_ble` = Bluetooth (most people), `_usb` = USB cable, `_tft` = touch-screen kit.
 
-**File types**
-- `…-UPDATE.bin`: for a radio already running MeshCore. Install with "Erase device" **unticked** to keep your contacts.
-- `…-FRESH-INSTALL-merged.bin`: a complete image for a new or wiped radio.
-- `_ble`: connect the phone app by Bluetooth (most people). `_usb`: connect by USB cable.
-- `_tft`: for the V4 with Heltec's touch-screen Expansion Kit.
+**Updating from 0.5 or 0.6:** install the UPDATE file directly with "Erase device" unticked. There's no need to install MeshCore 1.18 first; it's built in. Contacts, channels, settings and held messages are kept. **Back up your private key first**, as always: this version changes the MeshCore underneath BoxOnPost.
 
-Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.17.1-BOP-0.6` = MeshCore 1.17.1 + BoxOnPost 0.6).
+Checksums: see SHA256SUMS.txt.
 
-## Licence
-
-BoxOnPost is free to download and use, but it is **not open source**. See [LICENSE.md](LICENSE.md). Don't redistribute, modify or sell it without permission.
-
-Built on [MeshCore](https://github.com/meshcore-dev/MeshCore) (MIT License, © Scott Powell / rippleradios.com). BoxOnPost is not affiliated with the MeshCore project.
-
-Not for emergency or life-safety use.
-
----
-☕ [Support BoxOnPost on Ko-fi](https://ko-fi.com/boxonpost) · © 2026 BoxOnPost
+Free to use under the [BoxOnPost licence](https://github.com/boxonpost/boxonpost-firmware/blob/main/LICENSE.md). Not for emergency or life-safety use.
