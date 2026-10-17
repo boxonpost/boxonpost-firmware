@@ -16,19 +16,21 @@ Go to **[Releases](../../releases/latest)** and pick the file for your radio. No
 | Heltec V4 (small screen) | ✅ Tested |
 | Heltec V4 R8 (small screen) | ✅ Tested |
 | Heltec V4 touch screen (Expansion Kit) | ✅ Tested |
-| Heltec V4 R8 touch screen, Heltec T114, ThinkNode M1, M2, M3, M5, M7, M9 | 🧪 Being tested, coming soon |
+| ThinkNode M1 (e-ink), two versions: screen stays on / stock | ✅ Tested |
+| Heltec V4 R8 touch screen, Heltec T114, ThinkNode M2, M3, M5, M7, M9 | 🧪 Being tested, coming soon |
 
 **File types**
 - `…-UPDATE.bin`: for a radio already running MeshCore. Install with "Erase device" **unticked** to keep your contacts.
 - `…-FRESH-INSTALL-merged.bin`: a complete image for a new or wiped radio.
 - `_ble`: connect the phone app by Bluetooth (most people). `_usb`: connect by USB cable.
 - `_tft`: for the V4 with Heltec's touch-screen Expansion Kit.
+- ThinkNode M1: `….uf2` (copy onto the radio's USB drive) or `…-DFU.zip` (update over Bluetooth). `thinknode_m1_keep_…` keeps the screen readable when the backlight turns off; `thinknode_m1_…` blanks it like stock MeshCore.
 
-Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.18.0-BOP-0.7` = MeshCore 1.18.0 + BoxOnPost 0.7).
+Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.18.0-BOP-0.7.1` = MeshCore 1.18.0 + BoxOnPost 0.7.1).
 
 ## Licence
 
-BoxOnPost is free to download and use, but it is **not open source**. See [LICENSE.md](LICENSE.md). Don't redistribute, modify or sell it without permission.
+BoxOnPost is free to download and use, but it is **not open source**. See [LICENSE.md](LICENSE.md) and [NOTICES.md](NOTICES.md). Don't redistribute, modify or sell it without permission.
 
 Built on [MeshCore](https://github.com/meshcore-dev/MeshCore) (MIT License, © Scott Powell / rippleradios.com). BoxOnPost is not affiliated with the MeshCore project.
 
