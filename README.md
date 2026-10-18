@@ -1,6 +1,6 @@
 # BoxOnPost firmware
 
-**A mailbox for MeshCore radios.** When you send a direct message and the other person's radio can't be reached, your radio keeps it and keeps trying until their radio confirms it got it.
+**A mailbox for MeshCore radios.** When you send a direct message and the other person's radio can't be reached, your radio keeps it and keeps trying, for up to 5 days, until their radio confirms it got it.
 
 This repository only holds the **firmware downloads**. Install guides, the list of supported radios and help are on the website:
 
@@ -16,23 +16,25 @@ Go to **[Releases](../../releases/latest)** and pick the file for your radio. No
 | Heltec V4 (small screen) | ✅ Tested |
 | Heltec V4 R8 (small screen) | ✅ Tested |
 | Heltec V4 touch screen (Expansion Kit) | ✅ Tested |
-| ThinkNode M1 (e-ink), two versions: screen stays on / stock | ✅ Tested |
-| Heltec V4 R8 touch screen, Heltec T114, ThinkNode M2, M3, M5, M7, M9 | 🧪 Being tested, coming soon |
+| ThinkNode M1 (e-ink) | ✅ Tested |
+| Heltec V4 R8 touch screen, Heltec T114, Heltec Wireless Tracker, ThinkNode M2, M3, M4, M5, M7, M9, RAK WisBlock (RAK4631), RAK WisMesh Tag, Seeed T1000-E, Seeed Wio Tracker L1, LILYGO T-Beam Supreme, LILYGO T-Deck Plus, LILYGO T-Echo | 🧪 Being tested, coming soon |
 
 **File types**
 - `…-UPDATE.bin`: for a radio already running MeshCore. Install with "Erase device" **unticked** to keep your contacts.
 - `…-FRESH-INSTALL-merged.bin`: a complete image for a new or wiped radio.
 - `_ble`: connect the phone app by Bluetooth (most people). `_usb`: connect by USB cable.
 - `_tft`: for the V4 with Heltec's touch-screen Expansion Kit.
-- ThinkNode M1: `….uf2` (copy onto the radio's USB drive) or `…-DFU.zip` (update over Bluetooth). `thinknode_m1_keep_…` keeps the screen readable when the backlight turns off; `thinknode_m1_…` blanks it like stock MeshCore.
+- `….uf2` / `…-DFU.zip`: for nRF52 radios like the ThinkNode M1 (drag and drop, or Bluetooth update).
 
-Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.18.0-BOP-0.7.1` = MeshCore 1.18.0 + BoxOnPost 0.7.1).
+Each BoxOnPost release includes its own copy of MeshCore (the version is in the file name, e.g. `v1.18.0-BOP-0.7.2` = MeshCore 1.18.0 + BoxOnPost 0.7.2).
 
 ## Licence
 
-BoxOnPost is free to download and use, but it is **not open source**. See [LICENSE.md](LICENSE.md) and [NOTICES.md](NOTICES.md). Don't redistribute, modify or sell it without permission.
+BoxOnPost is free to download and use, but it is **not open source**. See [LICENSE.md](LICENSE.md). Don't redistribute, modify or sell it without permission.
 
 Built on [MeshCore](https://github.com/meshcore-dev/MeshCore) (MIT License, © Scott Powell / rippleradios.com). BoxOnPost is not affiliated with the MeshCore project.
+
+Found a bug? [Report it here](../../issues/new/choose).
 
 Not for emergency or life-safety use.
 
