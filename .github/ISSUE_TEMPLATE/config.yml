@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and help
+    url: https://discord.gg/EcnDSmrQJz
+    about: Ask in #help on the BoxOnPost Discord. You'll usually get an answer faster there.
+  - name: Install guides and FAQ
+    url: https://boxonpost.com/download.html
+    about: Step-by-step install guides for each radio, plus the FAQ.
+  - name: Private or business enquiries
+    url: https://boxonpost.com/community.html
+    about: For anything private, email us. The address is on the Community page.
