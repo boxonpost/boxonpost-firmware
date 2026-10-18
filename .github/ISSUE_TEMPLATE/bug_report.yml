@@ -1,0 +1,92 @@
+name: Bug report
+description: Something isn't working right with BoxOnPost on your radio.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make BoxOnPost better. Please fill in what you can.
+        **Reports here are public.** Don't include private keys, passwords, phone numbers or your home address.
+        Questions about how to use BoxOnPost get a faster answer in #help on our [Discord](https://discord.gg/EcnDSmrQJz).
+  - type: dropdown
+    id: radio
+    attributes:
+      label: Radio
+      description: Which radio is it on?
+      options:
+        - "Heltec V4 – V4, small screen"
+        - "Heltec V4 – V4 R8, small screen"
+        - "Heltec V4 – V4, touch screen"
+        - "Heltec V4 – V4 R8, touch screen"
+        - "Heltec V3"
+        - "Heltec T114 – With screen"
+        - "Heltec T114 – Without screen"
+        - "ThinkNode M1 – Screen stays on"
+        - "ThinkNode M1 – Stock (screen blanks)"
+        - "ThinkNode M2"
+        - "ThinkNode M3"
+        - "ThinkNode M5"
+        - "ThinkNode M7"
+        - "ThinkNode M9"
+        - "Heltec Wireless Tracker"
+        - "RAK WisBlock (RAK4631)"
+        - "RAK WisMesh Tag"
+        - "Seeed SenseCAP T1000-E"
+        - "Seeed Wio Tracker L1"
+        - "LILYGO T-Beam Supreme"
+        - "LILYGO T-Deck Plus"
+        - "Other (say which in the description)"
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware file and version
+      description: The file you installed, or the version shown on the start-up screen.
+      placeholder: "e.g. thinknode_m1_keep_companion_radio_ble-v1.18.0-BOP-0.7.1.uf2"
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: How is the phone app connected?
+      options:
+        - Bluetooth
+        - USB cable
+        - Not using the app
+    validations:
+      required: false
+  - type: textarea
+    id: what-you-did
+    attributes:
+      label: What did you do?
+      description: Step by step, so we can try it ourselves.
+      placeholder: |
+        1. Sent a direct message to a radio that was switched off
+        2. Switched the other radio back on after 20 minutes
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Photos or video
+      description: |
+        Drag photos or a short video straight into this box. A photo of the MAILBOX or LAST TRIES page helps a lot.
+        For a long video, paste a YouTube (unlisted) or Google Drive link instead.
+    validations:
+      required: false
+  - type: input
+    id: phone
+    attributes:
+      label: Phone and app (optional)
+      placeholder: "e.g. iPhone 15, MeshCore app 1.30"
+    validations:
+      required: false
